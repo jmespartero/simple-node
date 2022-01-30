@@ -18,4 +18,4 @@ script:
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --paswrod-stdin
-    - docker push jmespartero/simple-node_latest
+    - docker push jmespartero/simple-node:latest
