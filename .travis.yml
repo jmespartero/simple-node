@@ -13,7 +13,7 @@ before_script:
     
 script:
     - docker --version
-    - docker build -t simple-node
+    - docker build -t simple-node .
     - docker tag simple-node jmespartero/simple-node_latest
 
 after_success:
