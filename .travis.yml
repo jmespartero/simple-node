@@ -17,5 +17,5 @@ script:
     - docker tag simple-node jmespartero/simple-node_latest
 
 after_success:
-    - echo "success"
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --paswrod-stdin
     - docker push jmespartero/simple-node_latest
